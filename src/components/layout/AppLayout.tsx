@@ -7,7 +7,7 @@ import AppMenu from './AppMenu';
 import AppRoute from './AppRoute';
 
 import 'antd/dist/antd.css';
-import './AppLayout.css';
+// import './AppLayout.css';
 
 const { useBreakpoint } = Grid;
 

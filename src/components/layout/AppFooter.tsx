@@ -3,8 +3,8 @@ import React from 'react';
 import {
   Layout,
 } from 'antd';
-import logo from '../../assets/Group5757.svg';
-import footerimg from '../../assets/footerimg 1.svg';
+// import logo from '../../assets/Group5757.svg';
+// import footerimg from '../../assets/footerimg 1.svg';
 
 const { Footer } = Layout;
 
@@ -18,7 +18,7 @@ const AppFooter = (
     }}>
       <div style={{ borderTopStyle: 'solid', borderTopColor: '#858DBD', borderTopWidth: '1px', paddingTop: '30px', width: '100%', display: 'flex', paddingBottom: '30px' }}>
         <div style={{ marginRight: '18px' }}>
-          <img src={logo} width={38}  alt=''/>
+          {/*<img src={logo} width={38}  alt=''/>*/}
         </div>
         <div style={{ color: '#858DBD' }}>
           <p>
@@ -34,7 +34,7 @@ const AppFooter = (
           <div>
             <a href={'https://www.alchemy.com/'}>
               {/*{account ? '1234' : '5678'}*/}
-              <img src={footerimg} width={240} alt=''/>
+              {/*<img src={footerimg} width={240} alt=''/>*/}
             </a>
           </div>
         </div>
