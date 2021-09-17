@@ -1,10 +1,11 @@
 import React from 'react';
 import { Badge, Button, Col, Layout, Row,Select, Space, Typography, Tooltip, Grid } from 'antd';
 import { LogoutOutlined } from '@ant-design/icons';
+import '../../style/main.scss';
 
 import walleticonto from '../../assets/G_Wallet.svg';
 import down from '../../assets/Bu_Arrow1.svg';
-
+import Logo_pc from '../../images/layout/Logo_pc.svg';
 const { Header } = Layout;
 const { Option } = Select;
 const { Text } = Typography;
@@ -24,7 +25,19 @@ const AppHeader = (props: { collapsed: boolean }) => {
   };
 
   const wcComponent = () => {
-    return <Col style={{ justifyContent: 'flex-end', marginRight: '20px' }}>
+    return (
+    <Row justify={'space-between'}>
+      <Col span={'auto'}>
+        <img src={Logo_pc} />
+      </Col>
+      <Col span={'auto'}>
+        <Row style={{background:'red'}}>
+          <Col>menu1</Col>
+          <Col>menu1</Col>
+          <Col>menu1</Col>
+          <Col>menu1</Col>
+        </Row>
+      </Col>
       <Space style={{ marginRight: '16px' }}>
         {/*{account ? (*/}
         {/*  chainId === ChainId.MAINNET ? (<Text strong type='warning'>{toDisplayChainName(chainId)}</Text>) : (*/}
@@ -59,15 +72,15 @@ const AppHeader = (props: { collapsed: boolean }) => {
         {/*      <LogoutOutlined />*/}
         {/*    </Button>*/}
         {/*  </Tooltip>*/}
-        {/*)}*/}
+
       </Space>
-    </Col>;
+    </Row>
+  );
   };
 
   return (
     <Header className='site-layout-background' style={{ padding: 0 }}>
-      <Row>
-        <Col flex={1} />
+      {/*<Row>*/}
         {
           isXs ? (
               collapsed &&
@@ -78,7 +91,7 @@ const AppHeader = (props: { collapsed: boolean }) => {
               wcComponent()
             )
         }
-      </Row>
+      {/*</Row>*/}
     </Header>
   );
 };
